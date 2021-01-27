@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "name-arm": "Կոնվերս Բանկ",
+            "name-eng": "Conversebank"
+        },
+        "date": {
+            "date-arm": "26 Հնվ 20-00",
+            "date-eng": "26 Jan 20-00"
+        },
+        "currencies": {
+            "USD-B": 515,
+            "USD-S": 520,
+            "RUB-B": 6.80,
+            "RUB-S": 7.01,
+            "EUR-B": 623,
+            "EUR-S": 633,
+            "GBP-B": 701,
+            "GBP-S": 712
+        }
+    },
+    {
+        "id": 2,
+        "name": {
+            "name-arm": "Էյչ-Էս-Բի-Սի Բանկ",
+            "name-eng": "HSBC"
+        },
+        "date": {
+            "date-arm": "26 Հնվ 20-00",
+            "date-eng": "26 Jan 20-00"
+        },
+        "currencies": {
+            "USD-B": 516.50,
+            "USD-S": 520.50,
+            "RUB-B": 6.84,
+            "RUB-S": 7.06,
+            "EUR-B": 625.50,
+            "EUR-S": 635.50,
+            "GBP-B": 704.50,
+            "GBP-S": 717.50
+        }
+    }
+]

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <header class="header">
+            <div class="header__cont">
+                <div class="header__logo">
+                    <h1 class="logo">Task</h1>
+                </div>
+                <div class="header__lang">
+                    <div class="header__lang_item header__lang_arm">
+                        <a href="#">
+                            <img src="src/media/img/Arm.png" alt="Arm">
+                        </a>
+                    </div>
+                    <div class="header__lang_item header__lang_eng">
+                        <a href="#">
+                            <img src="src/media/img/Eng.png" alt="Eng">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="app__cont">
+            <table class="app__table">
+                <tbody class="app__tbody">
+                    <tr class="app__table_tr">
+                        <th class="tr-bank" colspan="2"></th>
+                        <th class="tr-date"></th>
+                        <th class="tr-table" colspan="8">
+                            <table class="currencies-table">
+                                <tr>
+                                    <th colspan="2">
+                                        <select class="select-buy-sell">
+                                            <option value="USD">USD</option>
+                                            <option value="RUB">RUB</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="GBP">GBP</option>
+                                        </select>
+                                    </th>
+                                    <th colspan="2">
+                                        <select class="select-buy-sell">
+                                            <option value="RUB">RUB</option>
+                                            <option value="USD">USD</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="GBP">GBP</option>
+                                        </select>
+                                    </th>
+                                    <th colspan="2">
+                                        <select class="select-buy-sell">
+                                            <option value="EUR">EUR</option>
+                                            <option value="USD">USD</option>
+                                            <option value="RUB">RUB</option>
+                                            <option value="GBP">GBP</option>
+                                        </select>
+                                    </th>
+                                    <th colspan="2">
+                                        <select class="select-buy-sell">
+                                            <option value="GBP">GBP</option>
+                                            <option value="USD">USD</option>
+                                            <option value="RUB">RUB</option>
+                                            <option value="EUR">EUR</option>
+                                        </select>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="buy-sell buy"></td>
+                                    <td class="buy-sell sell"></td>
+                                    <td class="buy-sell buy"></td>
+                                    <td class="buy-sell sell"></td>
+                                    <td class="buy-sell buy"></td>
+                                    <td class="buy-sell sell"></td>
+                                    <td class="buy-sell buy"></td>
+                                    <td class="buy-sell sell"></td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="converter">
+                <div class="converter__header">
+                    <h2 class="converter__header_name">Currency Converter</h2>
+                </div>
+                <div class="converter__cont">
+                    <div class="converter__inside">
+                        <select class="converter__banks">
+                            <option class="converter__bank conversebank" value="Conversebank"></option>
+                            <option class="converter__bank HSBC" value="HSBC"></option>
+                        </select>
+                        <div class="converter__currencys">
+                            <div class="converter__currencys_item">
+                                <h4 class="converter__currencys_title"></h4>
+                                <select class="converter__currency converter__currency_have">
+                                    <option value="USD">USD</option>
+                                    <option value="RUB">RUB</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="AMD">AMD</option>
+                                </select>
+                                <input class="converter__inp converter__have_inp" type="number" value="0" min="0" oninput="validity.valid||(value='')">
+                            </div>
+                            <div class="converter__currencys_item converter__currencys_want">
+                                <h4 class="converter__currencys_title"></h4>
+                                <select class="converter__currency converter__currency_want">
+                                    <option value="AMD">AMD</option>
+                                    <option value="USD">USD</option>
+                                    <option value="RUB">RUB</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="GBP">GBP</option>
+                                </select>
+                                <input class="converter__inp converter__want_inp" type="number" value="0" min="0" oninput="validity.valid||(value='')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/main.js"></script>
+</body>
+
+</html>

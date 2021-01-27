@@ -1,0 +1,152 @@
+html{
+    font-family: sans-serif;
+}
+.app{
+    height: 100vh;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+.header{
+    width: 100%;
+    height: 60px;
+}
+.header__cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 30px;
+    color: black;
+}
+.header__lang{
+    display: flex;
+}
+.header__lang_item:last-child{
+    margin-left: 10px;
+}
+
+/*
+app cont
+*/
+
+.app__cont{
+    width: 100%;
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+}
+.app__table{
+    width: 100%;
+}
+th, td{
+    border: 1px solid rgb(168, 168, 168);
+    align-items: center;
+    padding: 5px;
+}
+th{
+    height: 60px;
+    background-color: #e9e9e9;
+    padding: 20px 0;
+}
+.tr-table{
+    padding: 0;
+    border: none;
+}
+.tr-table th,
+.buy-sell{
+    border-left: none;
+    border-bottom: none;
+}
+.buy-sell{
+    width: 60px;
+}
+.currencies__td{
+    border: 1px solid rgb(168, 168, 168);
+}
+
+/*
+converter
+*/
+
+.converter{
+    margin-top: 70px;
+    width: 60%;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.converter__header{
+    padding: 10px;
+    background-color: rgb(21, 124, 172);
+}
+.converter__header_name{
+    color: #ffffff;
+}
+.converter__cont{
+    padding: 40px 0;
+    background-color: #e9e9e9;
+    display: flex;
+    justify-content: center;
+}
+.converter__inside{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.converter__currencys{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.converter__currencys_item{
+    width: 40%;
+}
+.converter__currencys_title{
+    font-size: 12px;
+    font-weight: 700;
+}
+.converter__currencys_want{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.converter__currency{
+    margin-top: 5px;
+}
+.converter__inp{
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+/*
+responsive
+*/
+
+
+@media screen and (max-width: 1030px) {
+    .app {
+        padding: 0 50px;
+    }
+    .converter{
+        width: 100%;
+    }
+}
+  
