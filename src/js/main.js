@@ -154,16 +154,16 @@ fetchReq()
 
 
 
-if(!localStorage.getItem("select0")){
+if (!localStorage.getItem("select0")) {
     localStorage.setItem("select0", "USD")
 }
-if(!localStorage.getItem("select1")){
+if (!localStorage.getItem("select1")) {
     localStorage.setItem("select1", "RUB")
 }
-if(!localStorage.getItem("select2")){
+if (!localStorage.getItem("select2")) {
     localStorage.setItem("select2", "EUR")
 }
-if(!localStorage.getItem("select3")){
+if (!localStorage.getItem("select3")) {
     localStorage.setItem("select3", "GBP")
 }
 
@@ -192,22 +192,60 @@ function inputHaveFunc() {
         if (converterBanks.value == key) {
             let values = banks[key][0];
             for (value in values) {
-                if (value == `${currencyHave.value}-B`) {
-                    converterInp[1].value = converterInp[0].value * values[value];
+                if (currencyHave.value == currencyWant.value) {
+                    converterInp[1].value = converterInp[0].value;
+                    return
+                }
+                else if(currencyHave.value == "AMD"){
+                    converterInp[1].value = converterInp[0].value / values[`${currencyWant.value}-B`];
+                }
+                else if (value == `${currencyHave.value}-B`) {
+                    if (currencyWant.value == "AMD") {
+                        converterInp[1].value = converterInp[0].value * values[value];
+                    }
+                    else {
+                        let summ1 = (converterInp[0].value * values[`${currencyHave.value}-B`])
+                        let summ2 = values[`${currencyWant.value}-B`]
+                        converterInp[1].value = summ1 / summ2;
+                    }
+                }
+            }
+        }
+    }
+}
+function inputWantFunc() {
+    for (key in banks) {
+        if (converterBanks.value == key) {
+            let values = banks[key][0];
+            for (value in values) {
+                if (currencyHave.value == currencyWant.value) {
+                    converterInp[0].value = converterInp[1].value;
+                    return
+                }
+                else if (value == `${currencyHave.value}-B`) {
+                    converterInp[0].value = converterInp[1].value / values[value];
                 }
             }
         }
     }
 }
 
+
 converterInp[0].addEventListener("input", inputHaveFunc)
+converterInp[1].addEventListener("input", inputWantFunc)
 
 converterBanks.addEventListener("change", () => {
+    converterInp[0].value = 1;
     inputHaveFunc()
+    inputWantFunc()
 })
 currencyHave.addEventListener("change", () => {
+    converterInp[0].value = 1;
     inputHaveFunc()
+    inputWantFunc()
 })
 currencyWant.addEventListener("change", () => {
+    converterInp[0].value = 1;
     inputHaveFunc()
+    inputWantFunc()
 })

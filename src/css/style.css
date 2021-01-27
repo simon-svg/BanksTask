@@ -40,7 +40,7 @@ app cont
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 70px;
+    padding: 70px 0;
 }
 .app__table{
     width: 100%;
@@ -157,7 +157,7 @@ responsive
 }
 @media screen and (max-width: 400px) {
     .app__cont{
-        padding-top: 20px;
+        padding: 20px 0;
     }
     .converter{
         margin-top: 50px;
