@@ -11,7 +11,7 @@ function create(what, where) {
 
 
 
-// localStorage set leng
+// localStorage set lang
 const langArm = document.querySelector(".header__lang_arm");
 const langEng = document.querySelector(".header__lang_eng");
 
@@ -222,8 +222,18 @@ function inputWantFunc() {
                     converterInp[0].value = converterInp[1].value;
                     return
                 }
-                else if (value == `${currencyHave.value}-B`) {
-                    converterInp[0].value = converterInp[1].value / values[value];
+                else if(currencyHave.value == "AMD"){
+                    converterInp[0].value = converterInp[1].value * values[`${currencyWant.value}-B`];
+                }
+                else if (value == `${currencyWant.value}-B`) {
+                    if (currencyHave.value == "AMD") {
+                        converterInp[0].value = converterInp[1].value / values[value];
+                    }
+                    else {
+                        let summ1 = (converterInp[1].value * values[`${currencyWant.value}-B`])
+                        let summ2 = values[`${currencyHave.value}-B`]
+                        converterInp[0].value = summ1 / summ2;
+                    }
                 }
             }
         }
@@ -235,17 +245,14 @@ converterInp[0].addEventListener("input", inputHaveFunc)
 converterInp[1].addEventListener("input", inputWantFunc)
 
 converterBanks.addEventListener("change", () => {
-    converterInp[0].value = 1;
     inputHaveFunc()
     inputWantFunc()
 })
 currencyHave.addEventListener("change", () => {
-    converterInp[0].value = 1;
     inputHaveFunc()
     inputWantFunc()
 })
 currencyWant.addEventListener("change", () => {
-    converterInp[0].value = 1;
     inputHaveFunc()
     inputWantFunc()
 })
