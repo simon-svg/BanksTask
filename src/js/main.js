@@ -146,6 +146,8 @@ function fetchReq() {
                 }
             });
         });
+        document.querySelector(".loader").style.display = "none";
+        table.style.display = "table";
 }
 fetchReq()
 
