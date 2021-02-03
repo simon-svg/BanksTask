@@ -227,6 +227,9 @@ function inputWantFunc() {
                 else if(currencyHave.value == "AMD"){
                     converterInp[0].value = converterInp[1].value * values[`${currencyWant.value}-B`];
                 }
+                else if(currencyWant.value == "AMD"){
+                    converterInp[0].value = converterInp[1].value / values[`${currencyHave.value}-B`];
+                }
                 else if (value == `${currencyWant.value}-B`) {
                     if (currencyHave.value == "AMD") {
                         converterInp[0].value = converterInp[1].value / values[value];
